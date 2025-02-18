@@ -21,7 +21,7 @@ public class View {
             System.out.println("1. Product CRUD");
             System.out.println("2. Customer CRUD");
             System.out.println("3. Customers filtered by location");
-
+            System.out.println("4. See customers that bought a product from a given region");
             System.out.println("6. Assign product to customer");
             System.out.println("0. Exit");
             int choice = scanner.nextInt();
@@ -36,6 +36,9 @@ public class View {
                     break;
                 case 3:
                     filterCustomersByLocation();
+                    break;
+                case 4:
+                    findCustomersByProductRegion();
                     break;
                 case 6:
                     assignProductToCustomer();
@@ -110,6 +113,12 @@ public class View {
         System.out.println("Enter location:");
         String location = scanner.nextLine();
         controller.getCustomersByLocation(location);
+    }
+
+    private void findCustomersByProductRegion() {
+        System.out.println("Enter product region:");
+        String region = scanner.nextLine();
+        controller.getCustomersByProductRegion(region);
     }
 
 }
