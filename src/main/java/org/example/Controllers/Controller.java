@@ -121,7 +121,7 @@ public class Controller {
     public void getCustomersByProductRegion(String region) {
         customerRepo.getAll().stream()
                 .filter(c -> c.getProducts().stream().anyMatch(p -> p.getRegion().equalsIgnoreCase(region)))
-                .sorted((c1,c2)-> Integer.compare(Integer.parseInt(c1.getName()), Integer.parseInt(c2.getName())))
+                .sorted()
                 .forEach(System.out::println);
     }
 
