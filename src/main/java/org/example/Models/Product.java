@@ -23,6 +23,7 @@ public class Product {
         return region;
     }
 
+
     @Override
     public String toString() {
         return name + " ($" + price + ", " + region + ")";

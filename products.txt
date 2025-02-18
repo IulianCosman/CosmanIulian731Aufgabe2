@@ -1,1 +1,10 @@
-1,1.0,1
+Kunai,50.0,Konoha
+Shuriken,30.0,Konoha
+Schwert,200.0,Kirigakure
+Heiltrank,100.0,Sunagakure
+Sprengsiegel,75.0,Iwagakure
+Riesenfächer,300.0,Sunagakure
+Giftklinge,150.0,Kirigakure
+Explosionskugel,250.0,Iwagakure
+Schattendolch,180.0,Konoha
+Wasserperle,90.0,Kirigakure

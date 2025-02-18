@@ -121,8 +121,18 @@ public class Controller {
     public void getCustomersByProductRegion(String region) {
         customerRepo.getAll().stream()
                 .filter(c -> c.getProducts().stream().anyMatch(p -> p.getRegion().equalsIgnoreCase(region)))
-                .sorted()
                 .forEach(System.out::println);
+    }
+
+    public void sortProductsOfCustomer(String name, String order) {
+        customerRepo.getAll().stream()
+                .filter(c -> c.getName().equalsIgnoreCase(name))
+                .findFirst()
+                .ifPresent(customer -> {
+                    customer.getProducts().stream()
+                            .sorted((p1, p2) -> order.equals("asc") ? Double.compare(p1.getPrice(), p2.getPrice()) : Double.compare(p2.getPrice(), p1.getPrice()))
+                            .forEach(System.out::println);
+                });
     }
 
 }

@@ -1,2 +1,5 @@
-2,2,2;1:1.0:1
-1,1,1
+1,Naruto Uzumaki,Konoha;Kunai:50.0:Konoha;Heiltrank:100.0:Sunagakure;Schattendolch:180.0:Konoha;Riesenfächer:300.0:Sunagakure
+2,Gaara,Sunagakure;Schwert:200.0:Kirigakure;Sprengsiegel:75.0:Iwagakure;Giftklinge:150.0:Kirigakure;Shuriken:30.0:Konoha
+3,Kisame Hoshigaki,Kirigakure;Shuriken:30.0:Konoha;Schwert:200.0:Kirigakure;Heiltrank:100.0:Sunagakure;Explosionskugel:250.0:Iwagakure;Wasserperle:90.0:Kirigakure
+4,Deidara,Iwagakure;Kunai:50.0:Konoha;Sprengsiegel:75.0:Iwagakure;Explosionskugel:250.0:Iwagakure;Wasserperle:90.0:Kirigakure
+5,Itachi Uchiha,Konoha;Schattendolch:180.0:Konoha;Giftklinge:150.0:Kirigakure;Schwert:200.0:Kirigakure;Explosionskugel:250.0:Iwagakure

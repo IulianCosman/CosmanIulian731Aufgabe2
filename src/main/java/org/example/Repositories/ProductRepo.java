@@ -59,4 +59,8 @@ public class ProductRepo implements Repository<Product> {
             e.printStackTrace();
         }
     }
+    public String get(int index){
+        List<Product> products = getAll();
+        return products.get(index).getName();
+    }
 }

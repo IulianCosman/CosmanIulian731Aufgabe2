@@ -22,6 +22,7 @@ public class View {
             System.out.println("2. Customer CRUD");
             System.out.println("3. Customers filtered by location");
             System.out.println("4. See customers that bought a product from a given region");
+            System.out.println("5. Sort products of a customer");
             System.out.println("6. Assign product to customer");
             System.out.println("0. Exit");
             int choice = scanner.nextInt();
@@ -40,8 +41,15 @@ public class View {
                 case 4:
                     findCustomersByProductRegion();
                     break;
+                case 5:
+                    sortProductsOfCharacter();
+                    break;
                 case 6:
-                    assignProductToCustomer();
+                    System.out.println("Enter Product Name:");
+                    String name = scanner.nextLine();
+                    System.out.println("Enter Customer Id:");
+                    int id = scanner.nextInt();
+                    assignProductToCustomer(id, name);
                     break;
                 case 0:
                     return;
@@ -51,11 +59,7 @@ public class View {
         }
     }
 
-    private void assignProductToCustomer() {
-        System.out.println("Enter Product Name:");
-        String name = scanner.nextLine();
-        System.out.println("Enter Customer Id:");
-        int id = scanner.nextInt();
+    public void assignProductToCustomer(int id, String name) {
         controller.assignProduct(id, name);
     }
 
@@ -120,5 +124,14 @@ public class View {
         String region = scanner.nextLine();
         controller.getCustomersByProductRegion(region);
     }
+
+    private void sortProductsOfCharacter() {
+        System.out.println("Enter customer name:");
+        String name = scanner.nextLine();
+        System.out.println("Enter sort order (asc/desc):");
+        String order = scanner.nextLine();
+        controller.sortProductsOfCustomer(name, order);
+    }
+
 
 }
