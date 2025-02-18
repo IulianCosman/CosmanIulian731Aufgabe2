@@ -112,4 +112,10 @@ public class Controller {
         productRepo.getAll().forEach(System.out::println);
     }
 
+    public void getCustomersByLocation(String location) {
+        customerRepo.getAll().stream()
+                .filter(c -> c.getLocation().equalsIgnoreCase(location))
+                .forEach(System.out::println);
+    }
+
 }
